@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.user-choice {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.user-choice__label,
+.user-choice__input {
+  display: block;
+  font-size: 24px;
+}
+
+.user-choice__input {
+  outline: none;
+  height: 40px;
+  border-radius: 15px;
+  padding: 0 10px;
+  margin: 10px auto 0;
+}
+
+.actions-row {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.action-button {
+  display: block;
+  border-radius: 15px;
+  font-size: 18px;
+  line-height: 28px;
+  width: 120px;
+  cursor: pointer;
+}
+
+.action-button:disabled {
+  cursor: not-allowed;
+}
+
+#start-button {
+  background-color: greenyellow;
+}
+
+#reset-button {
+  background-color: red;
+}
+
+.timer {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+}
+
+.timer:not(:empty):before {
+  display: block;
+  font-size: 25px;
+  color: black !important;
+  content: 'Seconds to dance:';
+}
+
+footer {
+  background-color: #3d4855;
+}
+
+footer img {
+  display: block;
+  margin: auto;
+}

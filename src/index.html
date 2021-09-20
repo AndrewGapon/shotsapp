@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+  <title>ShotsApp: crazy version of Pomodoro</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="app">
+  <main>
+    <audio
+      style="visibility: hidden"
+      controls
+      loop
+      id="shots"
+      src="lmfao_feat_lil_jon_-_shots_(z2.fm).mp3"
+    >
+    </audio>
+    <section>
+      <div class="user-choice">
+        <div class="user-choice__row">
+          <label class="user-choice__label" for="interval">Set playing interval in seconds</label>
+          <input class="user-choice__input" type="number" value="3600" id="interval" name="interval">
+        </div>
+      </div>
+      <div class="actions-row" id="actions">
+        <button
+          class="action-button"
+          id="start-button"
+          type="button"
+        >
+          Start your funny day!
+        </button>
+        <button
+          disabled
+          class="action-button"
+          id="pause-button"
+          type="button"
+        >
+          Put on hold...
+        </button>
+        <button
+          disabled
+          class="action-button"
+          type="button"
+          id="reset-button"
+        >
+          Stop this hell!
+        </button>
+      </div>
+      <div class="timer-section">
+        <div id="timer" class="timer"></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <img width="120" height="120" src="../resources/icon.png" alt="SHOTS">
+  </footer>
+</div>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

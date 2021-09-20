@@ -1,0 +1,41 @@
+{
+  "name": "shotsapp",
+  "productName": "ShotsApp",
+  "genericName": "ShotsApp",
+  "version": "0.1.0",
+  "description": "Crazy version of Pomodoro",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "lint": "xo src",
+    "fix": "xo --fix src",
+    "build": "electron-packager . --platform linux --arch x64 --out .dist/ --overwrite true --ignore='(yarn.*|\\/\\..*|\\.md$)' --icon=ShotsApp",
+    "deb64": "electron-installer-debian --src .dist/ShotsApp-linux-x64/ --arch amd64 --config .debian.config.json"
+  },
+  "keywords": [
+    "pomodoro"
+  ],
+  "author": {
+    "name": "Andrew Gapon",
+    "email": "gapon7007@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "6.0.0-beta.58",
+    "electron": "13.1.7",
+    "electron-installer-debian": "^3.1.0",
+    "electron-packager": "^15.1.0",
+    "xo": "^0.34.1"
+  },
+  "xo": {
+    "space": true,
+    "global": [
+      "document"
+    ]
+  }
+}
