@@ -1,1 +1,1 @@
-# Typher: typographic text editor
+# ShotsApp: crazy version of Pomodoro
